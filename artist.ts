@@ -4,8 +4,6 @@
 //  we can add an album 
 import { User } from "./user";
 
-
-
 export class Artist {
     name: string;
     albums: string[];
