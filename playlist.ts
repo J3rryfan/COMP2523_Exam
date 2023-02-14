@@ -45,7 +45,7 @@ export class Playlists {
     }
 
 
-    generateStatement(filePath: string, port: IImportable) {
+    localimporter(filePath: string, port: IImportable) {
         let statement = port.loadPlaylist(filePath);
         // should do something with statement
     };

@@ -1,5 +1,5 @@
 // create a user 
-import { Artist } from './Artist';
+import { Artist } from './artist';
 import { Album } from './album';
 import { Song } from './song';
 import { Playlists } from "./playlist";
@@ -8,7 +8,7 @@ import { IImportable } from "./playlistimporter";
 
 
 export class User {
-    
+
     private _username: string;
     private _password: string;
     private _playlists: Playlists[];
@@ -32,17 +32,16 @@ export class User {
 
 
     public Localimporter(filePath: string, port: IImportable){
-        this._playlists.loadPlaylist(filePath, port);
+        this._playlist.Localimporter(filePath, port);
     }
 
     // A user has an addPlaylist method to add a playlist to the user's playlists.
     addPlaylist(playlist: string) {
-        this._playlists.push(playlist);
-        
+        this._playlists.addAlbum(playlist)
     }
 
-    addAlbum( album: string){
-        this.album.addTracks(album);
+    addAlbum(album: string){
+    this._albums.push(album);
          
     }
 
